@@ -1,0 +1,2163 @@
+{
+	"info": {
+		"_postman_id": "12462bf4-5491-405c-ac7b-5d2e0c8a687b",
+		"name": "Falcon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25350743"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Google Auth",
+					"item": [
+						{
+							"name": "Get google URL",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/auth/google",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"google"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register by google acc",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/auth/google/callback",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"google",
+										"callback"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "This APIs are used with signup and login functionalities."
+				},
+				{
+					"name": "Signup",
+					"item": [
+						{
+							"name": "Signup with email",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rewanadel1266@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/register/email",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "verify code",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"otp\": 123456\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/verify/code",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"verify",
+										"code"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Complete profile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\"      : \"\",\r\n    \"lastName\"      : \"\",\r\n    \"password\"       : \"\",\r\n    \"confirmPassword\": \"\",\r\n    \"username\"       : \"\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/register/complete/profile",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register",
+										"complete",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Resend Code",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/auth/verify/resend",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"verify",
+										"resend"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "registeration by several methods :\n\n- Email\n    \n- Phone number\n    \n- Apple\n    \n- Twitter"
+				},
+				{
+					"name": "Login",
+					"item": [
+						{
+							"name": "login by email",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/login/email",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "verify code",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"otp\": 123456\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/verify/code",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"verify",
+										"code"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Enter Password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/login/enter/password",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login",
+										"enter",
+										"password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Resend Code",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/auth/verify/resend",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"verify",
+										"resend"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Reset password",
+					"item": [
+						{
+							"name": "Forgot Pass",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/forgot-password",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"forgot-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reset Pass",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"newPassword\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/reset-password/:token",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"reset-password",
+										":token"
+									],
+									"variable": [
+										{
+											"key": "token",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/auth/logout",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						},
+						"description": "logout by clear the cookie and google token if registred by google."
+					},
+					"response": []
+				}
+			],
+			"description": "The Authentication API provides endpoints for user registration, login, password and management It incorporates secure practices such as email verification and password reset functionality. Key features include:\n\n- **User Registration:** Allows users to sign up with a unique username and email or google .\n    \n- **Email Verification:** Verifies user identity through email confirmation be sending verification code into the email, ensuring a secure registration process.\n    \n- **Login:** Enables users to log in securely using their email and password or google.\n    \n- **Password Management:** Includes features for password reset, ensuring users can regain access to their accounts in case of a forgotten password.\n    \n\nThis API is designed to provide a robust and secure authentication system for user interactions with the application."
+		},
+		{
+			"name": "User Profile",
+			"item": [
+				{
+					"name": "Get Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/user/get/profile",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"get",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"firstName\"      : \"\",\r\n    // \"lastName\"       : \"\",\r\n    // \"username\"       : \"\",\r\n    // \"description\"    : \"\",\r\n    // \"country\"        : \"\",\r\n    // \"state\"          : \"\",\r\n    // \"city\"           : \"\",\r\n   // \"gender\"         : \"female\"\r\n    // \"birthday\"       : \"0000-00-00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/update/profile",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"update",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\"    : \"\",\r\n    \"newPassword\"    : \"\",\r\n    \"confirmPassword\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/change/password",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"change",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Image",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "img",
+									"type": "file",
+									"src": "pexels-neo-2653362.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/update/profile/picture",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"update",
+								"profile",
+								"picture"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete image",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/user/delete/profile/picture",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"delete",
+								"profile",
+								"picture"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Email",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/change/email",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"change",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp\": 123456,\r\n    \"userID\": 1,\r\n    \"newEmail\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/verify/code",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"verify",
+								"code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resend Code Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/auth/verify/resend",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"verify",
+								"resend"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "The User API provides endpoints for :\n\n- **User Profile:** get all user info**.**\n    \n- **Update User:** Enables user to update his/her info.\n    \n- **Delete Account:** Allows user to sign out and delete his/her account from the system.\n    \n\nThis API is designed to provide all crud operations to one user."
+		},
+		{
+			"name": "Identity",
+			"item": [
+				{
+					"name": "Admin Control",
+					"item": [
+						{
+							"name": "Approve Identity",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/identity/approve/:userID",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"identity",
+										"approve",
+										":userID"
+									],
+									"variable": [
+										{
+											"key": "userID",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Refuse Identity",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/identity/refuse/:userID",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"identity",
+										"refuse",
+										":userID"
+									],
+									"variable": [
+										{
+											"key": "userID",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Review Identity",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/identity/review/:userID",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"identity",
+										"review",
+										":userID"
+									],
+									"variable": [
+										{
+											"key": "userID",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Upload Card image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "img",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/identity/upload-card-image",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"identity",
+								"upload-card-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload selfie image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "img",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/identity/upload-selfie-image",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"identity",
+								"upload-selfie-image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Market",
+			"item": [
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "conditionOfUse",
+									"value": "",
+									"description": "'New', \"Used\", \"Light Used\",\"Like New\"",
+									"type": "text"
+								},
+								{
+									"key": "communicationMethod",
+									"value": "",
+									"description": "\"Chat\",\"Mobile phone\", \"Both\"",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/market/add",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"market",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "color",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "conditionOfUse",
+									"value": "",
+									"description": "'New', \"Used\", \"Light Used\",\"Like New\"",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "communicationMethod",
+									"value": "",
+									"description": "\"Chat\",\"Mobile phone\", \"Both\"",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/market/update/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"market",
+								"update",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/market/get-all?page=1&limit=10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"market",
+								"get-all"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/market/get/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"market",
+								"get",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/market/delete/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"market",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Social Media",
+			"item": [
+				{
+					"name": "Post",
+					"item": [
+						{
+							"name": "Add Post",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "content",
+											"value": "ee",
+											"type": "text"
+										},
+										{
+											"key": "images",
+											"type": "file",
+											"src": "OIP (1).jpeg"
+										},
+										{
+											"key": "privacy",
+											"value": "public",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/api/social/post/add",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"social",
+										"post",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdatePost",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "content",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "images",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										},
+										{
+											"key": "privacy",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/api/social/post/update/:id",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"social",
+										"post",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete One Post",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/social/post/delete/:id",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"social",
+										"post",
+										"delete",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Posts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/social/post/get-all?page=1&limit=10",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"social",
+										"post",
+										"get-all"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get One Post",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/social/post/get/:id",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"social",
+										"post",
+										"get",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Posts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/social/post/get-all/UserPosts?page=1&limit=10",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"social",
+										"post",
+										"get-all",
+										"UserPosts"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Comment",
+					"item": [
+						{
+							"name": "Post Comment",
+							"item": [
+								{
+									"name": "Add Post Comment",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"content\":\"nice\"\r\n    // ,\"parentCommentID\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/social/comment/post/add/:postID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"comment",
+												"post",
+												"add",
+												":postID"
+											],
+											"variable": [
+												{
+													"key": "postID",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Post Comment",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"content\":\"eeedaw\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/social/comment/post/update/:commentID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"comment",
+												"post",
+												"update",
+												":commentID"
+											],
+											"variable": [
+												{
+													"key": "commentID",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete One Post Comment",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/social/comment/post/delete/:commentID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"comment",
+												"post",
+												"delete",
+												":commentID"
+											],
+											"variable": [
+												{
+													"key": "commentID",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get All Post's Comment",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/social/comment/post/all/:postID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"comment",
+												"post",
+												"all",
+												":postID"
+											],
+											"variable": [
+												{
+													"key": "postID",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get One Post Comment",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/social/comment/post/get/:commentID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"comment",
+												"post",
+												"get",
+												":commentID"
+											],
+											"variable": [
+												{
+													"key": "commentID",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Event Comment",
+							"item": [
+								{
+									"name": "Add Event Comment",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"content\":\"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/social/post/comment/add/:postID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"post",
+												"comment",
+												"add",
+												":postID"
+											],
+											"variable": [
+												{
+													"key": "postID",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Event Comment",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "content",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "images",
+													"type": "file",
+													"src": [],
+													"disabled": true
+												},
+												{
+													"key": "privacy",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{URL}}/api/social/comment/update/:id",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"comment",
+												"update",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete One Event  Comment",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/social/comment/delete/:commentID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"comment",
+												"delete",
+												":commentID"
+											],
+											"variable": [
+												{
+													"key": "commentID",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get All Event 's Comment",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/social/post/comment/all/:postID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"post",
+												"comment",
+												"all",
+												":postID"
+											],
+											"variable": [
+												{
+													"key": "postID",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get One Event  Comment",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/social/post/comment/get/:commentID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"post",
+												"comment",
+												"get",
+												":commentID"
+											],
+											"variable": [
+												{
+													"key": "commentID",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Likes",
+					"item": [
+						{
+							"name": "Post Likes",
+							"item": [
+								{
+									"name": "Like",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/social/likes/post/:postID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"likes",
+												"post",
+												":postID"
+											],
+											"variable": [
+												{
+													"key": "postID",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Unlike",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/social/likes/post/unlike/:postID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"likes",
+												"post",
+												"unlike",
+												":postID"
+											],
+											"variable": [
+												{
+													"key": "postID",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get All Post's Likes",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/social/likes/post/get/all/:postID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"likes",
+												"post",
+												"get",
+												"all",
+												":postID"
+											],
+											"variable": [
+												{
+													"key": "postID",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Comment Likes",
+							"item": [
+								{
+									"name": "Like",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/likes/comment/:commentID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"likes",
+												"comment",
+												":commentID"
+											],
+											"variable": [
+												{
+													"key": "commentID",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Unlike",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/likes/comment/unlike/:commentID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"likes",
+												"comment",
+												"unlike",
+												":commentID"
+											],
+											"variable": [
+												{
+													"key": "commentID",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get All Comment's Likes",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/likes/comment/get/all/:commentID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"likes",
+												"comment",
+												"get",
+												"all",
+												":commentID"
+											],
+											"variable": [
+												{
+													"key": "commentID",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Follow",
+					"item": [
+						{
+							"name": "Follow",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Follow Copy",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Unfollow",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/social/follow/cancel/:followedID",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"social",
+										"follow",
+										"cancel",
+										":followedID"
+									],
+									"variable": [
+										{
+											"key": "followedID",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Followrs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/social/follow/followers/:userID",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"social",
+										"follow",
+										"followers",
+										":userID"
+									],
+									"variable": [
+										{
+											"key": "userID",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Following",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/social/follow/following/:userID",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"social",
+										"follow",
+										"following",
+										":userID"
+									],
+									"variable": [
+										{
+											"key": "userID",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Group",
+					"item": [
+						{
+							"name": "User Control of Groups",
+							"item": [
+								{
+									"name": "Create Group",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"name\":\"Group1\",\r\n   \"privacy\": \"public\",\r\n   \"isHidden\": false\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/social/group/create",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"group",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Group",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    //\"name\":\"Group test\",\r\n   //\"privacy\": \"public\",\r\n   \"isHidden\": true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/social/group/update/:groupID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"group",
+												"update",
+												":groupID"
+											],
+											"variable": [
+												{
+													"key": "groupID",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get One Group",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/social/group/get/:groupID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"group",
+												"get",
+												":groupID"
+											],
+											"variable": [
+												{
+													"key": "groupID",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get All for one user",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/social/group/all",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"group",
+												"all"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete One Group",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/social/group/delete/:groupID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"group",
+												"delete",
+												":groupID"
+											],
+											"variable": [
+												{
+													"key": "groupID",
+													"value": "4"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Group Members",
+							"item": [
+								{
+									"name": "Add Member",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"isAdmin\": false\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/social/group/member/add/:memberID/:groupID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"group",
+												"member",
+												"add",
+												":memberID",
+												":groupID"
+											],
+											"variable": [
+												{
+													"key": "memberID",
+													"value": "2"
+												},
+												{
+													"key": "groupID",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Remove Member",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/social/group/member/remove/:memberID/:groupID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"group",
+												"member",
+												"remove",
+												":memberID",
+												":groupID"
+											],
+											"variable": [
+												{
+													"key": "memberID",
+													"value": "2"
+												},
+												{
+													"key": "groupID",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Member Role",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/social/group/member/update/:memberID/:groupID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"group",
+												"member",
+												"update",
+												":memberID",
+												":groupID"
+											],
+											"variable": [
+												{
+													"key": "memberID",
+													"value": "2"
+												},
+												{
+													"key": "groupID",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get All Members",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/social/group/member/:groupID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"group",
+												"member",
+												":groupID"
+											],
+											"variable": [
+												{
+													"key": "groupID",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Leave Group",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/social/group/member/leave/:groupID",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"social",
+												"group",
+												"member",
+												"leave",
+												":groupID"
+											],
+											"variable": [
+												{
+													"key": "groupID",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:8000"
+		}
+	]
+}

@@ -1,0 +1,106 @@
+/* Signup Page Layout */
+.signup-content {
+  position: absolute;
+  top: 45%;
+  left: 55%;
+
+}
+  .signup-button {
+    flex: 2;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    width: 80%;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: #dddddd;
+    color: #5c5b5b;
+    text-align: center;
+  }
+  
+  .google-button:hover {
+    background-color: #e83535;
+    color: #fff;
+  }
+  
+  .email-button {
+    background-color: #353535;
+    color: #fff;
+  }
+  
+  .email-button:hover {
+    background-color: #2b8c45;
+  }
+  
+  /* Terms Section */
+  .signup-terms, .form-group label{
+    margin-top: 45px;
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
+  
+  .signup-terms b {
+    color: #b6b6b6;
+  }
+
+
+.signup-email-form{
+    position: absolute;
+    top: 45%;
+    left: 60%;
+  }
+
+.email-input{
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  border: none;
+  padding: 15px 40px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.next-btn{
+    margin-left:65%;
+    margin-top: 20%;
+    padding: 10px 40px;
+    border: 2px solid #363636;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+
+}
+
+.next-btn:hover{
+  background-color: #ffffffea; 
+  color: #000000e1;
+}
+
+/* Verification Code */
+
+.verification-code-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; 
+}
+
+.verification-code-input {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.verification-code-input:focus {
+  border-color: #000000;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* تأثير التركيز */
+}
